@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 interface PortfolioItemProps {
     title: string;
@@ -8,17 +8,23 @@ interface PortfolioItemProps {
     description: string;
 }
 
-function PortfolioItem({ title, imgUrl, stack, link, description }: PortfolioItemProps) {
+function PortfolioItem({
+    title,
+    imgUrl,
+    stack,
+    link,
+    description,
+}: PortfolioItemProps) {
     const [isHovered, setIsHovered] = useState(false); // State to manage hover effect
 
     return (
         <div
-            className='duration-200 border dark:border-stone-500 
-             drop-shadow-md dark:shadow-gray-600 dark:shadow-md rounded-lg overflow-hidden'
+            className="duration-200 border dark:border-stone-500 
+             drop-shadow-md dark:shadow-gray-600 dark:shadow-md rounded-lg overflow-hidden"
         >
             <a
                 href={link}
-                className='block relative w-full pb-[56.25%] overflow-hidden'
+                className="block relative w-full pb-[56.25%] overflow-hidden"
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={() => setIsHovered(true)} // Set hover state
@@ -27,7 +33,10 @@ function PortfolioItem({ title, imgUrl, stack, link, description }: PortfolioIte
                 <img
                     src={imgUrl}
                     alt="portfolio"
-                    className={`absolute top-0 left-0 w-full h-full object-cover cursor-pointer transition-all duration-300 ease-in-out ${isHovered ? 'filter blur-sm transform scale-105' : 'filter-none transform scale-100'}`}
+                    className={`absolute top-0 left-0 w-full h-full object-cover cursor-pointer transition-all duration-300 ease-in-out ${isHovered
+                        ? "filter blur-sm transform scale-105"
+                        : "filter-none transform scale-100"
+                        }`}
                     loading="lazy"
                 />
 
@@ -39,14 +48,18 @@ function PortfolioItem({ title, imgUrl, stack, link, description }: PortfolioIte
                 )}
             </a>
 
-            <div className='w-full p-4 bg-white dark:bg-stone-900'>
-                <h3 className='text-lg md:text-xl mb-2 md-mb-3 font-semibold'>
+            <div className="w-full p-4 bg-white dark:bg-stone-900">
+                <h3 className="text-lg md:text-xl mb-2 md-mb-3 font-semibold pointer-events-none">
                     {title}
                 </h3>
 
-                <p className='flex flex-wrap gap-2 flex-row items-center justify-center text-cs md:text-sm'>
+                <p className="flex flex-wrap gap-2 flex-row items-center justify-center text-cs md:text-sm">
                     {stack.map((item, index) => (
-                        <span key={index} className='inline-block px-2 py-1 font-semibold border-2 border-stone-900 dark:border-stone-200 rounded-md'>
+                        <span
+                            key={index}
+                            className="inline-block px-2 py-1 pointer-events-none 
+                            font-semibold border-2 border-stone-900 dark:border-stone-200 rounded-md"
+                        >
                             {item}
                         </span>
                     ))}

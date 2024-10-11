@@ -1,10 +1,13 @@
 function Intro() {
     return (
-        <div className="flex items-center justify-center flex-col text-center pt-20 pb-6 ">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl mb-1 md:mb-3 font-extrabold">Sujal Maharjan</h1>
+        <div className="flex items-center justify-center flex-col text-center pt-20 pb-6">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl mb-1 md:mb-3 font-extrabold 
+                pointer-events-none">
+                Sujal Maharjan
+            </h1>
 
             <p className="text-2xl md:text-3xl lg:text-4xl mb-3 font-bold">
-                <span className="inline-block">
+                <span className="inline-block pointer-events-none">
                     {'{'}Software Developer{'}'}
                 </span>
             </p>
@@ -25,7 +28,8 @@ function Intro() {
                     className="text-center inline-block px-8 
                     py-3 w-max text-base font-medium rounded-md
                     text-white dark:text-black bg-stone-900 
-                    hover:bg-slate-700 dark:bg-stone-100 dark:hover:bg-stone-300">
+                    hover:bg-slate-700 dark:bg-stone-100 dark:hover:bg-stone-300
+                    transition duration-300 ease-in-out">
                     CV
                 </a>
             </div>

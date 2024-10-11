@@ -21,6 +21,13 @@ export default [
         description: 'An immersive 3D survival game developed in Unity.'
     },
     {
+        title: 'URL SHORTNER',
+        imgUrl: 'UrlShortner.jpg',
+        stack: ['.NET 8', 'C#'],
+        link: 'https://github.com/SSujjall/UrlShortner',
+        description: 'A basic URL shortner made using .NET Web API, MVC for frontend and Microsoft SQL Server.'
+    },
+    {
         title: 'BLOG APPLICATION',
         imgUrl: 'Project2.png',
         stack: ['.NET 8', 'C#', 'React.js', 'PostgreSQL'],

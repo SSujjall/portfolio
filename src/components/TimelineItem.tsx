@@ -7,7 +7,7 @@ interface TimelineItemProps {
 
 function TimelineItem({ company, title, duration, details }: TimelineItemProps) {
     return (
-        <ol className='flex flex-col md:flex-row relative border-l border-stone-200 dark:border-stone-600'>
+        <ol className='pointer-events-none flex flex-col md:flex-row relative border-l border-stone-200 dark:border-stone-600'>
             <li className='mb-10 border rounded-lg dark:border-stone-700 p-1 w-full ml-4'>
                 <div className="absolute w-3 h-3 bg-stone-200 rounded-full 
                 mt-4 -left-1.5 border border-white

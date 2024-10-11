@@ -9,10 +9,10 @@ function Contact() {
                     method="POST"
                     className="flex flex-col w-9/12 md:w-9/12 lg:w-9/12 max-w-[700px]"
                 >
-                    <Title id="contact">Contact</Title>
-                    
+                    <Title id="contact">Contact Me</Title>
+
                     {/* Container for Name and Phone Number on the same line */}
-                    <div className="flex flex-col md:flex-row gap-4">
+                    <div className="flex flex-col md:flex-row md:gap-4 gap-2">
                         <input
                             type="text"
                             name="name"
@@ -59,7 +59,8 @@ function Contact() {
                             className="text-center inline-block px-8 
                             py-3 w-max text-base font-medium rounded-md
                             text-white dark:text-black bg-stone-900 
-                            hover:bg-slate-700 dark:bg-stone-100 dark:hover:bg-stone-300">
+                            hover:bg-slate-700 dark:bg-stone-100 dark:hover:bg-stone-300
+                            transition duration-300 ease-in-out">
                             Work with me
                         </button>
                     </div>
