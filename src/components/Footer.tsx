@@ -8,7 +8,7 @@ function Footer() {
                 <a href="https://www.linkedin.com/in/sujal-maharjan/" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faLinkedin} size="2x" />
                 </a>
-                <a href="https://github.com/h4aku" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/SSujjall" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faGithub} size="2x" />
                 </a>
             </div>
