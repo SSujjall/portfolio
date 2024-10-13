@@ -1,6 +1,15 @@
+import React, { useState } from "react";
 import Title from "./Title";
+import ReCAPTCHA from "react-google-recaptcha";
 
 function Contact() {
+    const [captchaVerified, setCaptchaVerified] = useState(false);
+
+    // Handle the reCAPTCHA change event
+    const handleCaptchaChange = (value: string | null) => {
+        setCaptchaVerified(!!value);  // !! ensures it's true or false
+    };
+
     return (
         <div className="flex flex-col mb-10 mx-auto">
             <div className="flex justify-center items-center">
@@ -11,7 +20,6 @@ function Contact() {
                 >
                     <Title id="contact">Contact Me</Title>
 
-                    {/* Container for Name and Phone Number on the same line */}
                     <div className="flex flex-col md:flex-row md:gap-4 gap-2">
                         <input
                             type="text"
@@ -52,15 +60,26 @@ function Contact() {
                         required
                     />
 
+                    {/* Google reCAPTCHA */}
+                    <div className="flex justify-center mb-4">
+                        <ReCAPTCHA
+                            sitekey="6Le69F8qAAAAAJ1v6nd-CiMRR8PcGFK-Yg6dBuJU"  // Replace with your Google reCAPTCHA site key
+                            onChange={handleCaptchaChange}
+                        />
+                    </div>
+
                     {/* Submit Button */}
                     <div className="flex justify-center">
                         <button
                             type="submit"
-                            className="text-center inline-block px-8 
+                            className={`text-center inline-block px-8 
                             py-3 w-max text-base font-medium rounded-md
                             text-white dark:text-black bg-stone-900 
                             hover:bg-slate-700 dark:bg-stone-100 dark:hover:bg-stone-300
-                            transition duration-300 ease-in-out">
+                            transition duration-300 ease-in-out ${!captchaVerified ? "opacity-50 cursor-not-allowed" : ""
+                                }`}
+                            disabled={!captchaVerified}  // Disable button until reCAPTCHA is verified
+                        >
                             Work with me
                         </button>
                     </div>
