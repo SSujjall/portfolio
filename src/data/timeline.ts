@@ -3,7 +3,9 @@ export default [
         company: "One Point Financial Services",
         title: "Junior .NET Developer",
         duration: 'Nov 2024 - Present',
-        details: []
+        details: [
+            '- Implementing services for thaili wallet.',
+        ]
     },
     {
         company: "One Point Financial Services",
