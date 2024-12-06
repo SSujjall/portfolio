@@ -7,6 +7,13 @@ export default [
         description: 'A task management application built with .NET, React.js and Microsoft SQL Server. Deployed in Azure.'
     },
     {
+        title: 'FastTravelCo Travel WebApp',
+        imgUrl: 'FastTravelCo.png',
+        stack: ['React.js', 'Tailwind CSS', 'Strapi'],
+        link: 'https://github.com/SSujjall/FastTravelCo-React-Strapi',
+        description: 'A travel application made using React.js with Tailwind CSS and Strapi for backend management.'
+    },
+    {
         title: 'CHATILY',
         imgUrl: 'Chatily.jpg',
         stack: ['.NET 8', 'React.js', 'SignalR'],
