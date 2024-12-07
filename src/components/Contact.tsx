@@ -2,7 +2,7 @@ import { useState } from "react";
 import Title from "./Title";
 import ReCAPTCHA from "react-google-recaptcha";
 
-function Contact() {
+const Contact: React.FC = () => {
     const [captchaVerified, setCaptchaVerified] = useState(false);
 
     // Handle the reCAPTCHA change event
