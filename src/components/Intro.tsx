@@ -8,7 +8,7 @@ function Intro() {
 
             <p className="text-2xl md:text-3xl lg:text-4xl mb-3 font-bold">
                 <span className="inline-block pointer-events-none">
-                    {'{'}Software Developer{'}'}
+                    {'{'}Software Engineer{'}'}
                 </span>
             </p>
 
@@ -30,7 +30,7 @@ function Intro() {
                     text-white dark:text-black bg-stone-900 
                     hover:bg-slate-700 dark:bg-stone-100 dark:hover:bg-stone-300
                     transition duration-300 ease-in-out">
-                    CV
+                    Download CV
                 </a>
             </div>
         </div>
