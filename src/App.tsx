@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-white min-h-screen font-inter mx-auto flex">
+      <div className="bg-white border-4 border-red-800 dark:bg-stone-900 text-stone-900 dark:text-white h-screen min-h-96 font-inter">
         <button className="fixed z-10 right-5 top-4 p-2 rounded-full bg-black text-white dark:bg-white dark:text-black"
           onClick={() => darkModeHandler()}>
           {dark && <IoSunny />}
