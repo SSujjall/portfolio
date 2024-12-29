@@ -1,0 +1,17 @@
+/* Style the scrollbar container */
+.custom-scrollbar::-webkit-scrollbar {
+    /* Horizontal scrollbar thickness */
+    width: 8px;
+    /* Vertical scrollbar thickness */
+    height: 8px;
+}
+
+/* Style the scrollbar thumb (the part the user drags) */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: grey;
+}
+
+/* Optional: Style for the scrollbar corners */
+.custom-scrollbar::-webkit-scrollbar-corner {
+    background-color: transparent;
+}

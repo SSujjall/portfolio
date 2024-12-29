@@ -6,6 +6,7 @@ import AboutMe from './components/AboutMe';
 import Resume from './components/Resume';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
+import './App.css'
 
 function App() {
   const [dark, setDark] = useState(false);
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-white min-h-screen font-inter mx-auto">
+      <div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-white min-h-screen font-inter mx-auto flex">
         <button className="fixed z-10 right-5 top-4 p-2 rounded-full bg-black text-white dark:bg-white dark:text-black"
           onClick={() => darkModeHandler()}>
           {dark && <IoSunny />}
