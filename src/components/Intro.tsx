@@ -8,21 +8,21 @@ function Intro() {
 
             <p className="text-2xl md:text-3xl lg:text-4xl mb-3 font-bold">
                 <span className="inline-block pointer-events-none">
-                    {'{'}Software Engineer{'}'}
+                    {'{'}Software Developer{'}'}
                 </span>
             </p>
 
             <p className='text-sm lg:text-base max-w-sm md:max-w-2xl lg:max-w-3xl mb-6'>
-                I’m a passionate software developer with expertise in .NET and React.js,
-                and strong foundation in Node.js, Express, MongoDB, PostgreSQL, and MSSQL.
-                Woking to create efficient and scalable applications that enhance user
-                experiences and solve real-world problems. With a deep interest in software
-                development, I’m constantly exploring new technologies and best practices to
-                stay at the forefront of the industry.
+                Experienced .NET Developer with a strong background in building scalable and maintainable
+                applications using .NET Core, MVC, Clean Architecture, and EF Core. Proficient in developing
+                dynamic web applications with Razor Pages and React, ensuring seamless front-end and back-end
+                integration. Passionate about writing clean, efficient code and following best practices to
+                deliver high-quality software solutions. Looking for opportunities to contribute my skills to
+                innovative projects and grow in a dynamic development environment.
             </p>
 
             <div className="flex justify-center mb-8">
-                <a href="https://drive.google.com/file/d/11WLh_lDMn20BlSWkxjVku8yUML15N5wQ/view?usp=sharing"
+                <a href="https://drive.google.com/file/d/1GDWs0QnVmo9qJhvYHHux4ffe6Lk_E1mI/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-center inline-block px-8 

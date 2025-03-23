@@ -30,7 +30,7 @@ function TimelineItem({ company, title, duration, details }: TimelineItemProps) 
                 </div>
 
                 {details.map((detail, index) => (
-                    <p key={index} className='my-2 text-base font-normal text-stone-500 dark:text-stone-300'>
+                    <p key={index} className='my-2 text-sm font-normal text-stone-500 dark:text-stone-300'>
                         {detail}
                     </p>
                 ))}
