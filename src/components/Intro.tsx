@@ -22,7 +22,7 @@ function Intro() {
             </p>
 
             <div className="flex justify-center mb-8">
-                <a href="https://drive.google.com/file/d/1GDWs0QnVmo9qJhvYHHux4ffe6Lk_E1mI/view?usp=sharing"
+                <a href="https://drive.google.com/file/d/1B2ckEaqWRcqsdgK8nxMmJn3xzeXEWalj/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-center inline-block px-8 
