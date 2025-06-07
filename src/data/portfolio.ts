@@ -10,7 +10,7 @@ export default [
         title: 'ECOMMERCE APPLICATION',
         imgUrl: 'https://res.cloudinary.com/dpzfiivmk/image/upload/v1742715634/PortfolioImages/5327245c-8181-434c-b6d1-e0069407ce9d.png',
         stack: ['.NET 8', 'MVC', 'C#', 'EF Core', 'MSSQL', 'Cloudinary'],
-        link: 'https://github.com/SSujjall/TodoList',
+        link: 'https://github.com/SSujjall/EcomMVC',
         description: 'Ecommerce application built using .NET MVC, EF Core and Mssql. Deployed in MonsterAsp.'
     },
     {
