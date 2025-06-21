@@ -1,8 +1,14 @@
 export default [
     {
+        company: "Infinite Computer Solutions",
+        title: "Trainee",
+        duration: 'May 2025 - Present',
+        details: []
+    },
+    {
         company: "One Point Financial Services",
         title: "Junior .NET Developer",
-        duration: 'Nov 2024 - Present',
+        duration: 'Nov 2024 - Apr 2025',
         details: [
             '- Integrated services for One Point API Management System (APIMS), focusing on developing robust and scalable backend solutions.',
             '- Developed and integrated DLL services for Thaili digital wallet application and Machhapuchre Bank Limited, contributing to improved features and user experience.',
