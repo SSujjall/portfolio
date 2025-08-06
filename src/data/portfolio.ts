@@ -14,6 +14,13 @@ export default [
         description: 'Ecommerce application built using .NET MVC, EF Core and Mssql. Deployed in MonsterAsp.'
     },
     {
+        title: 'VOTING SYSTEM',
+        imgUrl: 'https://res.cloudinary.com/dpzfiivmk/image/upload/v1754469989/PortfolioImages/voting-system_n5t0yd.png',
+        stack: ['.NET 8', 'C#', 'SignalR', 'Feature Based Clean Architecture', 'Angular', 'MSSQL'],
+        link: 'https://github.com/SSujjall/VotingSystem',
+        description: 'A voting system created with .NET Web API, Angular and MSSQL along with SignalR for live vote updates.'
+    },
+    {
         title: 'ToDoLi',
         imgUrl: 'https://res.cloudinary.com/dpzfiivmk/image/upload/v1742712884/PortfolioImages/Screenshot_2025-03-23_123928_s32ngh.png',
         stack: ['.NET 8', 'C#', 'EF Core', 'MSSQL'],
