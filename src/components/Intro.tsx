@@ -8,7 +8,7 @@ function Intro() {
 
             <p className="text-2xl md:text-3xl lg:text-4xl mb-3 font-bold">
                 <span className="inline-block pointer-events-none">
-                    {'{'}Software Developer{'}'}
+                    {'{'}Software Engineer{'}'}
                 </span>
             </p>
 
