@@ -7,6 +7,13 @@ export default [
         description: 'A blogging platform created with .NET, React.js and Mssql. Deployed in MonsterAsp and Vercel.'
     },
     {
+        title: 'CAFFEOPHILIA',
+        imgUrl: 'https://res.cloudinary.com/dpzfiivmk/image/upload/v1764225939/PortfolioImages/Screenshot_2025-11-27_123000_sgpxf8.png',
+        stack: ['React.js', 'Tailwind CSS', 'CPanel'],
+        link: 'https://caffeophilia.com/',
+        description: 'Landing page for a coffee shop built using React.js and Tailwind CSS. Deployed in CPanel.'
+    },
+    {
         title: 'ECOMMERCE APPLICATION',
         imgUrl: 'https://res.cloudinary.com/dpzfiivmk/image/upload/v1742715634/PortfolioImages/5327245c-8181-434c-b6d1-e0069407ce9d.png',
         stack: ['.NET 8', 'MVC', 'C#', 'EF Core', 'MSSQL', 'Cloudinary'],
