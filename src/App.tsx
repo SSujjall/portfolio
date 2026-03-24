@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import Intro from "./components/Intro";
 import Portfolio from "./components/Portfolio";
 import Timeline from "./components/Timeline";
@@ -10,22 +10,22 @@ function App() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setTheme('dark');
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
     } else {
-      setTheme('light');
+      setTheme("light");
     }
   }, []);
 
   const handleThemeSwitch = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark");
     }
   }, [theme]);
 
@@ -52,7 +52,7 @@ function App() {
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth={1.5}
-      stroke="white"
+      stroke="currentColor"
       className="w-6 h-6"
     >
       <path
@@ -68,9 +68,12 @@ function App() {
       <button
         type="button"
         onClick={handleThemeSwitch}
-        className="fixed z-10 right-5 top-4 bg-black dark:bg-white text-lg p-1 rounded-md"
+        className="fixed z-10 right-5 top-5 w-9 h-9 flex items-center justify-center
+          text-stone-900 dark:text-stone-100
+          bg-stone-300 dark:bg-stone-700 hover:bg-stone-400 dark:hover:bg-stone-600
+          rounded-full transition-colors duration-200"
       >
-        {theme === 'dark' ? sun : moon}
+        {theme === "dark" ? sun : moon}
       </button>
 
       <div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-white min-h-screen font-inter mx-auto">

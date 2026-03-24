@@ -3,90 +3,84 @@ import Title from "./Title";
 import ReCAPTCHA from "react-google-recaptcha";
 
 function Contact() {
-    const [captchaVerified, setCaptchaVerified] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
 
-    // Handle the reCAPTCHA change event
-    const handleCaptchaChange = (value: string | null) => {
-        setCaptchaVerified(!!value);  // !! ensures it's true or false
-    };
+  const handleCaptchaChange = (value: string | null) => {
+    setCaptchaVerified(!!value);
+  };
 
-    return (
-        <div className="flex flex-col mb-10 mx-auto">
-            <div className="flex justify-center items-center">
-                <form
-                    action="https://getform.io/f/payggwna"
-                    method="POST"
-                    className="flex flex-col w-9/12 md:w-9/12 lg:w-9/12 max-w-[700px]"
-                >
-                    <Title id="contact">Contact Me</Title>
+  const inputClass = `w-full bg-transparent border-b border-stone-300 dark:border-stone-600
+        py-2.5 text-sm text-stone-900 dark:text-stone-50 placeholder:text-stone-400 dark:placeholder:text-stone-500
+        focus:outline-none focus:border-stone-900 dark:focus:border-stone-100
+        transition-colors duration-200`;
 
-                    <div className="flex flex-col md:flex-row md:gap-4 gap-2">
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="Name"
-                            className="p-2 bg-transparent border-2 
-                            rounded-md focus:outline-none flex-1"
-                            required
-                        />
-                        <input
-                            type="text"
-                            name="phone"
-                            placeholder="Phone Number"
-                            className="p-2 bg-transparent border-2 
-                            rounded-md focus:outline-none flex-1"
-                            required
-                        />
-                    </div>
+  return (
+    <div className="flex flex-col mb-16 mx-auto">
+      <div className="flex justify-center items-center">
+        <form
+          action="https://getform.io/f/payggwna"
+          method="POST"
+          className="flex flex-col w-9/12 md:w-9/12 lg:w-9/12 max-w-[700px] gap-6"
+        >
+          <Title id="contact">Contact Me</Title>
 
-                    {/* Email Input */}
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Email"
-                        className="my-2 p-2 bg-transparent border-2 
-                        rounded-md focus:outline-none"
-                        required
-                    />
+          <div className="flex flex-col md:flex-row md:gap-8 gap-6">
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              className={inputClass}
+              required
+            />
+            <input
+              type="text"
+              name="phone"
+              placeholder="Phone Number"
+              className={inputClass}
+              required
+            />
+          </div>
 
-                    {/* Message Input */}
-                    <textarea
-                        name="message"
-                        placeholder="Message"
-                        cols={30}
-                        rows={10}
-                        className="p-2 mb-4 bg-transparent border-2 
-                        rounded-md focus:outline-none resize-none"
-                        required
-                    />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            className={inputClass}
+            required
+          />
 
-                    {/* Google reCAPTCHA */}
-                    <div className="flex justify-center mb-4">
-                        <ReCAPTCHA
-                            sitekey="6Le69F8qAAAAAJ1v6nd-CiMRR8PcGFK-Yg6dBuJU"  // Replace with your Google reCAPTCHA site key
-                            onChange={handleCaptchaChange}
-                        />
-                    </div>
+          <textarea
+            name="message"
+            placeholder="Message"
+            rows={6}
+            className={`${inputClass} resize-none`}
+            required
+          />
 
-                    {/* Submit Button */}
-                    <div className="flex justify-center">
-                        <button
-                            type="submit"
-                            className={`text-center inline-block px-8 
-                            py-3 w-max text-base font-medium rounded-md
-                            text-white dark:text-black bg-stone-900 
-                            hover:bg-slate-700 dark:bg-stone-100 dark:hover:bg-stone-300
-                            transition duration-300 ease-in-out ${!captchaVerified ? "opacity-50 cursor-not-allowed" : ""
-                                }`}
-                            disabled={!captchaVerified}  // Disable button until reCAPTCHA is verified
-                        >
-                            Work with me
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    );
+          <div className="flex justify-center">
+            <ReCAPTCHA
+              sitekey="6Le69F8qAAAAAJ1v6nd-CiMRR8PcGFK-Yg6dBuJU"
+              onChange={handleCaptchaChange}
+            />
+          </div>
+
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              disabled={!captchaVerified}
+              className={`inline-block px-7 py-2.5 text-sm font-medium rounded-full
+                                text-white dark:text-black bg-stone-900 dark:bg-stone-100
+                                hover:bg-stone-700 dark:hover:bg-stone-300
+                                transition-colors duration-200
+                                ${!captchaVerified ? "opacity-40 cursor-not-allowed" : ""}`}
+            >
+              Work with me
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
 }
 
 export default Contact;

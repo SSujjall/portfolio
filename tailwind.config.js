@@ -4,7 +4,8 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: 'class', 
+  darkMode: 'class',
+  future: { hoverOnlyWhenSupported: true },
   theme: {
     extend: {
       fontFamily: {
@@ -12,6 +13,6 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar')({ nocompatible: true })],
 }
 

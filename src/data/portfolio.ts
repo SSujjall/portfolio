@@ -2,7 +2,7 @@ export default [
     {
         title: 'BLOG APPLICATION',
         imgUrl: 'https://res.cloudinary.com/dpzfiivmk/image/upload/v1742711133/PortfolioImages/Screenshot_2025-03-23_120915_awjc3b.png',
-        stack: ['.NET 8', 'C#', 'Clean Architecture', 'React.js', 'MSSQL', 'Cloudinary', 'SMTP'],
+        stack: ['.NET 10', 'C#', 'Clean Architecture', 'React.js', 'MSSQL', 'Cloudinary', 'SMTP', 'eSewa Payment', 'Khalti Payment'],
         link: 'https://github.com/SSujjall/BlogApp',
         description: 'A blogging platform created with .NET, React.js and Mssql. Deployed in MonsterAsp and Vercel.'
     },
