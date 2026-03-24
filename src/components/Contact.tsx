@@ -15,12 +15,12 @@ function Contact() {
         transition-colors duration-200`;
 
   return (
-    <div className="flex flex-col mb-16 mx-auto">
-      <div className="flex justify-center items-center">
+    <div className="main-container py-5 md:py-8">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <form
           action="https://getform.io/f/payggwna"
           method="POST"
-          className="flex flex-col w-9/12 md:w-9/12 lg:w-9/12 max-w-[700px] gap-6"
+          className="flex flex-col gap-6"
         >
           <Title id="contact">Contact Me</Title>
 

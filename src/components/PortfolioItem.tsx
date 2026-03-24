@@ -61,13 +61,13 @@ function PortfolioItem({
             className={`absolute inset-0 w-full h-full object-cover
                         transition-all duration-500 ease-in-out
                         ${isLoaded ? "opacity-100" : "opacity-0"}
-                        ${isHovered ? "blur-sm scale-105" : "scale-100"}`}
+                        ${isHovered && window.innerWidth >= 768 ? "blur-sm scale-105" : "scale-100"}`}
             loading="lazy"
             onLoad={() => setIsLoaded(true)}
           />
 
           {/* Hover overlay — desktop only */}
-          {isHovered && isLoaded && (
+          {isHovered && isLoaded && window.innerWidth >= 768 && (
             <div className="absolute inset-0 flex items-center justify-center bg-black/60 text-white p-4">
               <p className="text-xs text-center leading-relaxed">
                 {description}
@@ -96,12 +96,12 @@ function PortfolioItem({
           </a>
 
           {/* Hidden on mobile — visible md+ */}
-          <p
+          {/* <p
             className="hidden md:block text-xs text-stone-500 dark:text-stone-400
                         leading-relaxed line-clamp-2 mt-1.5 mb-2.5"
           >
             {description}
-          </p>
+          </p> */}
 
           <div
             className="hidden md:flex flex-wrap gap-1 pt-2
@@ -134,7 +134,7 @@ function PortfolioItem({
         description={description}
       />
     </>
-  );
+    );
 }
 
 export default PortfolioItem;

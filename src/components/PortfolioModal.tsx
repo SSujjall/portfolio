@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 interface PortfolioModalProps {
   isOpen: boolean;
@@ -20,14 +20,41 @@ function PortfolioModal({
   link,
   description,
 }: PortfolioModalProps) {
-  // Lock body scroll while open
+  const touchStartY = useRef(0);
+  const scrollTop = useRef(0);
+
+  // Robust scroll lock (fixes iOS Safari too)
   useEffect(() => {
-    if (isOpen) document.body.style.overflow = "hidden";
-    else document.body.style.overflow = "";
+    if (isOpen) {
+      scrollTop.current = window.scrollY;
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollTop.current}px`;
+      document.body.style.width = "100%";
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      window.scrollTo(0, scrollTop.current);
+    }
     return () => {
       document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
     };
   }, [isOpen]);
+
+  // Swipe-down-to-close on the drag handle
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartY.current = e.touches[0].clientY;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    const delta = e.changedTouches[0].clientY - touchStartY.current;
+    if (delta > 60) onClose();
+  };
 
   return (
     <AnimatePresence>
@@ -52,21 +79,30 @@ function PortfolioModal({
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             exit={{ y: "100%" }}
-            transition={{ type: "spring", stiffness: 320, damping: 32 }}
+            transition={{ type: "tween", ease: "easeOut", duration: 0.25 }}
+            style={{ willChange: "transform" }}
           >
-            {/* Drag handle */}
-            <div className="flex justify-center pt-3 pb-1 flex-shrink-0">
+            {/* Drag handle — touch target for swipe-to-close */}
+            <div
+              className="flex justify-center pt-3 pb-2 flex-shrink-0 cursor-grab active:cursor-grabbing"
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+            >
               <div className="w-10 h-1 rounded-full bg-stone-300 dark:bg-stone-600" />
             </div>
 
-            {/* Scrollable content */}
-            <div className="overflow-y-auto flex-1">
+            {/* Scrollable content — overscroll-contain keeps page locked */}
+            <div
+              className="overflow-y-auto flex-1"
+              style={{ overscrollBehavior: "contain", WebkitOverflowScrolling: "touch" } as React.CSSProperties}
+            >
               {/* Image */}
               <div className="relative w-full pb-[52%] bg-stone-100 dark:bg-stone-800">
                 <img
                   src={imgUrl}
                   alt={title}
                   className="absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
 
